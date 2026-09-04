@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraunhofer Institut</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="fraunhofer.jpg" alt="Logo" class="fraunhofer_logo">
+            <span class="komplett_überschrift">Fraunhofer Institut</span>
+        </div>
+        
+
+        <button class="hinzufügen_button" id="open_webbutton">
+            Webserver Hinzufügen
+        </button>
+    </header>
+
+    <h1 class="überschrift">Webserver Status</h1>
+    <p class="beschreibung">Hier können Sie den Status Ihrer Webserver einsehen.</p>
+
+    <button id="button_aktualisiseren" onclick="aktualisierungalle()">Aktualisieren</button>
+
+    <section class="server_bereich">
+        <table class="webserver_tabelle">
+            <tr>
+                <th>Servername</th>
+                <th>Url´s</th>
+                <th>Status</th>
+                <th>Fehlermeldung</th>
+                <th>Ping</th>
+                <th>Links</th>
+                <th>Letzte Aktualisierung</th>
+                <th>Einstellungen</th>
+                <th>Aktualisieren</th>
+            </tr>
+            <thead>
+                <tbody class="server_liste">
+                    
+                </tbody>
+            </thead>
+        </table>
+
+    </section>
+    <footer class="footer">
+        <p>&copy; Webserver Status der Fraunhofer Gesellschaft SIT</p>
+    </footer>
+
+    <div id="popup" class="popup">Server wurden aktualisiert</div>
+    <div id="popuphinzufügen" class="popup">Server wurde hinzugefügt</div>
+
+<div class="popup_menu" id="popupmenu_hinzugfuegen">
+    <div class="popup_content">
+        <span class="close-btn" id="closemodel">&times;</span>
+        <h1 class="popup_titel">Webserver hinzufügen</h1>
+        <div class="url_eingabe">
+            <div class="feld">
+                <span class="url_input_titel">URL</span>
+                <input type="url" placeholder="www.sit.fraunhofer.de" class="url_input" id="urlinputhinzufuegen">
+                <p class="beschreibung_url">Geben Sie die vollständige Adresse des Webservers ein.</p>
+            </div>
+            <div class="feld">
+                <span class="url_input_titel">Name</span>
+                <input type="text" placeholder="Server-Name" class="url_input" id="nameinputhinzufuegen">
+                <p class="beschreibung_name">Vergeben Sie einen eindeutigen Namen für den Server.</p>
+            </div>
+        </div>
+        <button class="hinzufügen_von_webserver" id="hinzufuegenbuttonja" onclick="hinzufuegenprüfen()">Hinzufügen</button>
+    </div>
+</div>
+
+<div class="popup_menu" id="popupmenu_edit">
+    <div class="popup_content">
+        <span class="close-btn" id="closeedit">&times;</span>
+        <h1 class="popup_titel">Webserver bearbeiten</h1>
+        <div class="url_eingabe">
+            <div class="feld">
+                <span class="url_input_titel"">URL</span>
+                <input type="url" placeholder="www.sit.fraunhofer.de" class="url_input" id="urlinputedit">
+                <p class="beschreibung_url">Geben Sie die vollständige Adresse des Webservers ein.</p>
+            </div>
+            <div class="feld">
+                <span class="url_input_titel">Name</span>
+                <input type="text" placeholder="Server-Name" class="url_input" id="nameinputedit">
+                <p class="beschreibung_name">Vergeben Sie einen eindeutigen Namen für den Server.</p>
+            </div>
+        </div>
+        <button class="edit_bestatigen" id="editbuttonja">Änderung Bestätigen</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
